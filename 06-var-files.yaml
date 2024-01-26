@@ -1,7 +1,7 @@
 - name: INSTALLING PACKAGE FROM VARIABLE FILE
   hosts: web
   become: yes
-  vars:
+  vars_files:
    - variable.yaml
   tasks:
    - name: INSTALLING PACKAGE FROM VARIABLE FILE
