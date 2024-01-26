@@ -6,8 +6,8 @@
 #     # this is the map
 #    ansible.builtin.ping:
 
-name: ping the node
-hosts: web
-tasks:
- - name: pinging the server
-   ansible.builtin.ping:
+- name: ping the node
+  hosts: web
+  tasks:
+  - name: pinging the server
+    ansible.builtin.ping:
