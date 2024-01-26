@@ -2,8 +2,13 @@
   hosts: web
   become: yes
   tasks:
-  - name: INSTALLING GIT SERVER
+  - name: INSTALLING NGINX SERVER
     ansible.builtin.yum:
      name: nginx
      state: present
+  
+  - name: STARTING THE NGINX SERVER
+    ansible.builtin.service:
+     name: nginx
+     state: started
     
