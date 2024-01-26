@@ -1,8 +1,9 @@
 - name: PRINTING HELLO WORLD 
   hosts: web
   become: yes
-  
+  vars:
+   course: DevOps
   tasks:
    - name: PRINTING HELLO WORLD
      ansible.builtin.debug:
-      msg: "Hello world, I am learning DevOps Course"
+      msg: "Hello world, I am learning {{course}}"
