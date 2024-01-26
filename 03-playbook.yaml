@@ -10,5 +10,5 @@
   - name: STARTING THE HTTPD SERVER
     ansible.builtin.service:
       name: httpd
-      state: started
+      state: restarted
     
