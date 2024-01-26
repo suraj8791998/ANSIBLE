@@ -1,10 +1,11 @@
-- name: INSTALLING THE PACKAGES USING VARIABLES
+---
+- name: INSTALLING HTTPD SERVER
   hosts: web
   become: yes
   vars:
-   package: maven
+    package: maven
   tasks:
-   - name: INSTALLING {{PACKAGE}} USING VARIABLES
-     ansible.builtin.yum: 
-      name: {{PACKAGE}}
-      state: present
+    - name: INSTALLING {{ PACKAGE }} USING VARIABLES
+      ansible.builtin.yum:
+        name: "{{ package }}"
+        state: present
