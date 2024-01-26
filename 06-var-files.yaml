@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   vars:
-   variable.yaml
+   - variable.yaml
   tasks:
    - name: INSTALLING PACKAGE FROM VARIABLE FILE
      ansible.builtin.yum:
