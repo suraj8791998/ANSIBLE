@@ -1,0 +1,14 @@
+- name: INSTALLING HTTPD SERVER
+  hosts: web
+  become: yes
+  tasks:
+  - name: INSTALLING HTTPD SERVER
+    ansible.builtin.yum:
+      name: httpd
+      state: present
+
+  - name: STARTING THE HTTPD SERVER
+    ansible.builtin.service:
+      name: httpd
+      state: started
+    
