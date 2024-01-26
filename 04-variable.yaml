@@ -5,7 +5,7 @@
   vars:
     package: maven
   tasks:
-    - name: INSTALLING "{{ PACKAGE }}"" USING VARIABLES
+    - name: INSTALLING "{{ PACKAGE }}" USING VARIABLES
       ansible.builtin.yum:
         name: "{{ package }}"
         state: present
