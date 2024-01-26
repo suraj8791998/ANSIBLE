@@ -1,0 +1,9 @@
+- name: INSTALLING PACKAGE FROM VARIABLE FILE
+  hosts: web
+  become: yes
+  vars:
+   variable.yaml
+  tasks:
+   - name: INSTALLING PACKAGE FROM VARIABLE FILE
+     ansible.builtin.yum:
+      name: "{{package}}"
