@@ -1,0 +1,9 @@
+- name: INSTALLING THE GIT SERVER
+  hosts: web
+  become: yes
+  tasks:
+  - name: INSTALLING GIT SERVER
+    ansible.builtin.yum:
+     name: nginx
+     state: present
+    
